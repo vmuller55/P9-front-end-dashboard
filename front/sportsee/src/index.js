@@ -4,6 +4,7 @@ import './index.css';
 import Home from './pages/Home/Home.jsx'
 import Header from './components/Header/Header'
 import SideBar from './components/SideBar/SideBar'
+import Start from './pages/start/Start'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
@@ -13,6 +14,7 @@ root.render(
     <Header />
     <SideBar />
     <Routes>
+      <Route path='/user/' element={<Start />} />
       <Route path="/user/:id" element={<Home/>}/>
     </Routes>
   </BrowserRouter>
