@@ -1,15 +1,10 @@
-import Header from '../../components/Header/Header'
-import SideBar from '../../components/SideBar/SideBar'
-import Banner from '../../components/Banner/Banner.jsx'
+
+import Dashboard from '../../components/Banner/Dashboard.jsx'
 import './Home.css'
 
 function Home() {
     return (
-        <>
-            <Header />
-            <SideBar></SideBar>
-            <Banner></Banner>
-        </>
+        <Dashboard></Dashboard>
     )
 }
 
