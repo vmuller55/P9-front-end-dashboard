@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
 import dataUser from '../../services/mockFetch'
 
+
 export function Dashboard() {
     const {id} = useParams()
     const {categorie} = useParams()
