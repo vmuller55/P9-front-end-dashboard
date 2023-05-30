@@ -2,7 +2,7 @@ import './Dashboard.css'
 import { useParams, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
 import dataUser from '../../services/mockFetch'
-
+import Chart from '../userData/daily/Daily'
 
 export function Dashboard() {
     const {id} = useParams()
@@ -47,6 +47,7 @@ export function Dashboard() {
         <div className='banner'>
             <h1>Bonjour <span className='colorName'>{userMain.firstName}</span></h1>
             <h2>Félicitation : vous avez explosé vos objectifs hier 👏</h2>
+            <Chart userActivityData={userActivity.sessions}/>
         </div>
     )
 }

@@ -1,5 +1,8 @@
 import {userMainData, userActivityData, userAverageSessionsData, userPerformanceData } from "../data/mockData"
-import {mainData, activityData, averageSessionsData, performanceData} from "../services/DataFormat"
+import { MainData } from "./class/MainDataFormat";
+import { ActivityData } from "./class/ActivityDataFormat";
+import { PerformanceData } from "./class/PerfomranceDataFormat";
+import { AverageSessionsData } from "./class/AverageSessionData";
 
 /**
  * retrieve the mocked data and create a new class
@@ -8,25 +11,25 @@ import {mainData, activityData, averageSessionsData, performanceData} from "../s
  */
 function getUserMainData(id) {
     const data = userMainData.find(value => value.id.toString() === id);
-    const userMain = new mainData(data);
+    const userMain = new MainData(data);
     return userMain;
 }
 
 function getUserActivity(id) {
-    const data = userActivityData.find (value => value.userId.toString() === id);   //userActivityData = const dans le mock
-    const userActivity = new activityData(data);
+    const data = userActivityData.find (value => value.userId.toString() === id); 
+    const userActivity = new ActivityData(data);
     return userActivity;
 }
 
 function getUserAverageSessions(id) {
     const data = userAverageSessionsData.find (value => value.userId.toString() === id);
-    const userSessions = new averageSessionsData(data);
+    const userSessions = new AverageSessionsData(data);
     return userSessions;
     ;
 }
 function getUserPerformance(id) {
     const data = userPerformanceData.find (value => value.userId.toString() === id);
-    const userPerformance = new performanceData(data);
+    const userPerformance = new PerformanceData(data);
     return userPerformance;
 }
 

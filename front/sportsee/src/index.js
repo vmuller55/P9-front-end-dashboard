@@ -14,7 +14,7 @@ root.render(
     <Header />
     <SideBar />
     <Routes>
-      <Route path='/user/' element={<Start />} />
+      <Route index element={<Start />} />
       <Route path="/user/:id" element={<Home/>}/>
     </Routes>
   </BrowserRouter>
