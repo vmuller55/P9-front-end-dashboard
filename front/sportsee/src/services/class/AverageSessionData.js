@@ -5,6 +5,7 @@ class AverageSessionsData {
         this.day = data.sessions.day;
         this.session = data.sessions.sessionLength;
     }
+
 }
 
 export {AverageSessionsData}

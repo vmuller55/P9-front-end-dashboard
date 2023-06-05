@@ -1,8 +1,14 @@
+header{
+    width: 100%;
+}
+
 .headerBox{
     background-color: black;
     display: flex;
     width: 100%;
 }
+
+
 
 .headerBox img{
     width: 178px;

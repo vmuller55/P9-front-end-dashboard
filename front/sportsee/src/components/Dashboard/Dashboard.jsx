@@ -3,6 +3,12 @@ import { useParams, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
 import dataUser from '../../services/mockFetch'
 import Chart from '../userData/daily/Daily'
+import CaloriesAside from '../userData/aside/Calories/Calories'
+import ProteinAside from '../userData/aside/prot/Protein'
+import CarbsAside from '../userData/aside/Carbs/Carbs'
+import FatAside from '../userData/aside/fat/Fat'
+import UserAverageSessions from '../userData/average/Average'
+
 
 export function Dashboard() {
     const {id} = useParams()
@@ -39,15 +45,30 @@ export function Dashboard() {
             .catch(error => console.log("erreur données id", error))
     },
     [id, categorie, navigate])
-    
     if (!userMain || !userActivity || !userSessions || !userPerformance) {
         return null
     }
+    console.log(userSessions.sessions)
     return(
-        <div className='banner'>
-            <h1>Bonjour <span className='colorName'>{userMain.firstName}</span></h1>
-            <h2>Félicitation : vous avez explosé vos objectifs hier 👏</h2>
-            <Chart userActivityData={userActivity.sessions}/>
+        <div>
+            <div className='banner'>
+                <h1>Bonjour <span className='colorName'>{userMain.firstName}</span></h1>
+                <h2>Félicitation : vous avez explosé vos objectifs hier 👏</h2>
+            </div>
+            <div className='board'>
+                <div className='chartOne'>
+                <Chart userActivityData={userActivity.sessions}/>
+                </div>
+                <div className='aside'>
+                    <CaloriesAside amountOfCalories={userMain.calorie}/>
+                    <ProteinAside amountOfProtein={userMain.proteine}></ProteinAside>
+                    <CarbsAside amountOfCarbs={userMain.glucide}></CarbsAside>
+                    <FatAside amountOfFat={userMain.lipide}></FatAside>
+                </div>
+                <div className='chartTwo'>
+                    <UserAverageSessions averageSessionData={userSessions.sessions}></UserAverageSessions>
+                </div>
+            </div>
         </div>
     )
 }

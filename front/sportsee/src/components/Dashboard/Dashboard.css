@@ -16,3 +16,38 @@ h2{
 .colorName{
     color: #FF0101;
 }
+
+.board{
+    margin-left: 225px;
+    display: grid;
+    margin-top: 77px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-right: 90px;
+    gap: 30px;
+    
+}
+
+.chartOne{
+    grid-column: span 3;
+}
+
+.aside{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    grid-column-start: 4;
+    grid-row: span 4;
+}
+
+@media screen and (max-width:1350px) {
+    .board{
+        margin-left: 150px;
+    }
+}
+
+@media screen and (max-width:1170px) {
+    .board{
+        flex-wrap: wrap;
+        justify-content: center;
+    }   
+}

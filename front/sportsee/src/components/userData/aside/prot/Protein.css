@@ -1,0 +1,45 @@
+.proteinElement{
+    display: flex;
+    background-color: #FBFBFB;
+    width: 258px;
+    height: 124px;
+    justify-content: center;
+    gap: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+}
+
+.proteinImage{
+    width: 60px;
+    height: 60px;
+    margin: auto 0;
+}
+
+h4{
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.proteinText{
+    margin: auto 0;
+}
+
+.proteinText p{
+    margin: 0px;
+    
+}
+
+.proteinValue{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+@media screen and (max-width:1350px) {
+    .proteinElement{
+        width: 158px;
+        height: 84px;
+        gap: 20px;
+    }
+
+}
