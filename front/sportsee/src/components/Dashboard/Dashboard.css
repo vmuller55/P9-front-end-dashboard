@@ -46,8 +46,21 @@ h2{
 }
 
 @media screen and (max-width:1170px) {
-    .board{
-        flex-wrap: wrap;
-        justify-content: center;
-    }   
+    .chartOne{
+         grid-column: span 2;
+    }  
+    .aside{
+        grid-column-start: 3;
+        grid-row: span 1;
+    } 
+
+    .chartTwo{
+        grid-row-start: 2;
+    }
+    .chartThree{
+        grid-row-start: 2;
+    }
+    .chartFour{
+        grid-row-start: 2;
+    }
 }

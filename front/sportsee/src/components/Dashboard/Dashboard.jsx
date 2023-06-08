@@ -8,7 +8,8 @@ import ProteinAside from '../userData/aside/prot/Protein'
 import CarbsAside from '../userData/aside/Carbs/Carbs'
 import FatAside from '../userData/aside/fat/Fat'
 import UserAverageSessions from '../userData/average/Average'
-
+import RadarChartThree from '../userData/radar/Radar'
+import ObjectifChart from '../userData/Objectif/Objectif'
 
 export function Dashboard() {
     const {id} = useParams()
@@ -48,7 +49,6 @@ export function Dashboard() {
     if (!userMain || !userActivity || !userSessions || !userPerformance) {
         return null
     }
-    console.log(userSessions.sessions)
     return(
         <div>
             <div className='banner'>
@@ -67,6 +67,12 @@ export function Dashboard() {
                 </div>
                 <div className='chartTwo'>
                     <UserAverageSessions averageSessionData={userSessions.sessions}></UserAverageSessions>
+                </div>
+                <div className='chartThree'>
+                    <RadarChartThree dataPerformance={userPerformance} ></RadarChartThree>
+                </div>
+                <div className='chartFour'>
+                    <ObjectifChart mainData={userMain}></ObjectifChart>
                 </div>
             </div>
         </div>

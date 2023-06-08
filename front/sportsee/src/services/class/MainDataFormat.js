@@ -9,6 +9,7 @@ class MainData {
         this.proteine = data.keyData.proteinCount;
         this.glucide = data.keyData.carbohydrateCount;
         this.lipide = data.keyData.lipidCount
+        this.scorePourcent = data.todayScore * 100 || data.score * 100
     }
     
 }

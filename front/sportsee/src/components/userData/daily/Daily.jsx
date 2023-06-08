@@ -16,8 +16,21 @@ function Chart({ userActivityData }) {
         return null;
       }
     
-    
-      
+    const dayNumber = [
+        { dayNum: 1},
+        { dayNum: 2},
+        { dayNum: 3},
+        { dayNum: 4},
+        { dayNum: 5},
+        { dayNum: 6},
+        { dayNum: 7},
+    ]
+    const addNum= () => {
+        for(let i = 0; i<userActivityData.length; i++){
+             Object.assign(userActivityData[i], dayNumber[i]) 
+        }
+    }
+    addNum();
     return (
         <div className="activityChart">
             <ResponsiveContainer >
@@ -33,7 +46,7 @@ function Chart({ userActivityData }) {
                 barGap={8}  
                 >
                 <CartesianGrid strokeDasharray="1" vertical={false} />
-                <XAxis className='activityXAxis' tickLine={false} dataKey={'day'} stroke=" #DEDEDE" tick={{fill:"#9B9EAC", fontWeight:500, fontSize:14}} padding={{ left: -47, right: -48 }} tickMargin={16} />
+                <XAxis className='activityXAxis' tickLine={false} dataKey={'dayNum'} stroke=" #DEDEDE" tick={{fill:"#9B9EAC", fontWeight:500, fontSize:14}} padding={{ left: -47, right: -48 }} tickMargin={16} />
 
                 <YAxis yAxisId={'left'} hide  />
 
