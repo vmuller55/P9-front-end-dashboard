@@ -1,0 +1,10 @@
+.errorText{
+    margin: auto;
+    background-color: aqua;
+    text-align: center;
+    margin-top: 500px;
+    margin-left: 500px;
+    width: 400px;
+    height: 400px;
+    font-size: 90px;
+}

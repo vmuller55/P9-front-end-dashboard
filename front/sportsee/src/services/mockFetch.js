@@ -5,9 +5,9 @@ import { PerformanceData } from "./class/PerfomranceDataFormat";
 import { AverageSessionsData } from "./class/AverageSessionData";
 
 /**
- * retrieve the mocked data and create a new class
- * @param {number} id 
- * @returns new class data
+ * Find id in mocked data then use Class to format Data
+ * @param {Number} id 
+ * @returns 
  */
 function getUserMainData(id) {
     const data = userMainData.find(value => value.id.toString() === id);
@@ -34,10 +34,10 @@ function getUserPerformance(id) {
 }
 
 /**
- * retrieve data 
- * @param {number} id 
- * @param {string} categorie 
- * @returns promise
+ * Depending category returns requested data
+ * @param {Number} id 
+ * @param {String} categorie 
+ * @returns 
  */
 const getData = async (id, categorie) => {
     switch (categorie) {

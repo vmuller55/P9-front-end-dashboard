@@ -5,6 +5,7 @@ import Home from './pages/Home/Home.jsx'
 import Header from './components/Header/Header'
 import SideBar from './components/SideBar/SideBar'
 import Start from './pages/start/Start'
+import ErrorPage from './pages/Error/Error';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
@@ -16,6 +17,7 @@ root.render(
     <Routes>
       <Route index element={<Start />} />
       <Route path="/user/:id" element={<Home/>}/>
+      <Route path='/Error' element={<ErrorPage/>}/>
     </Routes>
   </BrowserRouter>
 );

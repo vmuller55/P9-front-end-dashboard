@@ -1,6 +1,9 @@
 import './Start.css'
 import { Link } from 'react-router-dom'
-
+/**
+ * Allow to choose profil
+ * @returns 
+ */
 export function Start(){
     return(
         <div className="choice">

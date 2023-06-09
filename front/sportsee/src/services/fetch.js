@@ -4,7 +4,12 @@ import { PerformanceData } from "./class/PerfomranceDataFormat";
 import { AverageSessionsData } from "./class/AverageSessionData";
 
 const url = 'http://localhost:3000/user';
-
+/**
+ * 
+ * @param {Number} id 
+ * @param {String} categorie 
+ * @returns 
+ */
 const getData = async(id, categorie) => {
     let wichUrl = categorie ? url + `/${id}/${categorie}/` : url + `/${id}`;
 
