@@ -1,11 +1,11 @@
 header{
-    width: 100%;
+    max-width: 100%;
 }
 
 .headerBox{
     background-color: black;
     display: flex;
-    width: 100%;
+    max-width: 100%;
 }
 
 
@@ -19,15 +19,24 @@ header{
 
 .headerBox nav{
     width: 100%;
+    max-width: 100%;
 }
 
 .navLink{
     display: flex;
     color: white;
     list-style-type: none;
-    justify-content: space-between;
     margin-right: 87px;
-    margin: 36px 87px 31px 150px;
     font-size: 24px;
     font-weight: 500;
+    max-width: 100%;
+    padding: 0px;
+}
+
+.navLink li{
+    margin: auto;
+}
+
+.wrapperBanner{
+    max-width: 100%;
 }

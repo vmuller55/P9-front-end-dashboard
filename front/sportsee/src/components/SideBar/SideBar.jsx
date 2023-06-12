@@ -6,6 +6,7 @@ import icon4 from '../../assets/images/icon4.png'
 
 export function SideBar() {
     return(
+        <div className='sideBarWrapper'>
             <div className="sideBar">
                 <ul className="sideBarIcon">
                     <li><img src={icon1} alt='icone méditation'></img></li>
@@ -15,6 +16,7 @@ export function SideBar() {
                 </ul>
                 <h3>Copiryght, SportSee 2020</h3>
             </div>
+        </div>
     )
 }
 

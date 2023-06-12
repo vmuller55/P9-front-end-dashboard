@@ -1,6 +1,7 @@
 .banner{
-    margin-left: 225px;
+    margin-left: 109px;
     margin-top: 70px; 
+    max-width: 100%;
 }
 
 h1{
@@ -18,13 +19,14 @@ h2{
 }
 
 .board{
-    margin-left: 225px;
+    margin-left: 109px;
     display: grid;
     margin-top: 77px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-right: 90px;
+    grid-template-rows: 1fr 1fr;
     gap: 30px;
-    
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .chartOne{
@@ -34,28 +36,62 @@ h2{
 .aside{
     display: flex;
     flex-direction: column;
-    row-gap: 30px;
+    row-gap: 39px;
     grid-column-start: 4;
-    grid-row: span 4;
+    grid-row: span 2;
+}
+
+.wrapperDashboard{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.noProfil{
+    margin: auto;
+    text-align: center;
+}
+
+.noProfil h2{
+    font-size: 90px;
+}
+.noProfil h4{
+    font-size: 70px;
 }
 
 @media screen and (max-width:1350px) {
     .board{
-        margin-left: 150px;
+        margin-left: 50px;
+    }
+    .banner{
+        margin-left: 50px;
     }
 }
 
 @media screen and (max-width:1170px) {
+
+    .board{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 0.2fr;
+        gap: 10px;
+        margin-top: 15px;
+        margin-left: 30px;
+    }
     .chartOne{
-         grid-column: span 2;
+         grid-column: span 3;
     }  
     .aside{
-        grid-column-start: 3;
-        grid-row: span 1;
+        grid-column-start: 1;
+        grid-column: span 3;
+        flex-direction: row;
+        justify-content: space-between;
+        
     } 
-
+    .banner{
+        margin-top: 20px;
+    }
     .chartTwo{
         grid-row-start: 2;
+        height: fit-content;
     }
     .chartThree{
         grid-row-start: 2;
@@ -63,4 +99,5 @@ h2{
     .chartFour{
         grid-row-start: 2;
     }
+    
 }

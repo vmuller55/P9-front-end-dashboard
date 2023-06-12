@@ -5,16 +5,16 @@
     color: white;
     display: flex;
     flex-direction: column;
-    position: absolute;
+    justify-content: space-between;
+    
 }
-
 .sideBarIcon{
     padding: 0px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     list-style-type: none;
-    margin: 250px 26px 0px 26px;  
+    margin: 250px 26px 0px 26px;   
 }
 
 .sideBarIcon li{
@@ -22,12 +22,15 @@
 }
 
 h3{
-    padding: 0px;
     font-size: 12px;
-    margin: 0px;
-    margin-top: 164px;
     transform: rotate(-90deg);
     white-space: nowrap;
+    margin-bottom: 150px;
+}
+
+.sideBarWrapper{
+    height: 100%;
+    background-color: black;
 }
 
 @media screen and (max-height : 940px){

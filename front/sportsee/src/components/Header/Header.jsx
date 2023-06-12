@@ -5,19 +5,19 @@ import { Link } from 'react-router-dom'
 export function Header () {
     return (
         <header>
-            <div className='headerBox'>
-                <Link to={"/"}><img src={logo} alt={'logo'}></img></Link>
-                <nav>
-                    <ul className='navLink'>
-                        <li>Accueil</li>
-                        <li>Profil</li>
-                        <li>Réglage</li>
-                        <li>Communauté</li>
-                    </ul>
-                </nav>
-                
+            <div className='wrapperBanner'>
+                <div className='headerBox'>
+                    <Link to={"/"}><img src={logo} alt={'logo'}></img></Link>
+                    <nav>
+                        <ul className='navLink'>
+                            <li>Accueil</li>
+                            <li>Profil</li>
+                            <li>Réglage</li>
+                            <li>Communauté</li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-            
         </header>
     )
 }

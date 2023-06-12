@@ -1,6 +1,7 @@
 import './Dashboard.css'
 import { useParams, useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
+import { Link } from 'react-router-dom'
 /**
  * Use mocked data
  */
@@ -62,11 +63,16 @@ export function Dashboard() {
      */
     [id, categorie, navigate])
     if (!userMain || !userActivity || !userSessions || !userPerformance) {
-        return null
+        return (
+            <div className='noProfil'>
+                <h2>Erreur lors du chargement du profil</h2>
+                <Link to='/' style={{textDecoration : 'none'}}><h4>Retour à la page d'accueil</h4></Link>
+            </div>
+        )
     }  
 
     return(
-        <div>
+        <div className='wrapperDashboard'>
             <div className='banner'>
                 <h1>Bonjour <span className='colorName'>{userMain.firstName}</span></h1>
                 <h2>Félicitation : vous avez explosé vos objectifs hier 👏</h2>
