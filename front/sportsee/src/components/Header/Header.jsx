@@ -7,7 +7,7 @@ export function Header () {
         <header>
             <div className='wrapperBanner'>
                 <div className='headerBox'>
-                    <Link to={"/"}><img src={logo} alt={'logo'}></img></Link>
+                    <Link to={"/"} style={{textDecoration : "none"}}><img src={logo} alt={'logo'}></img></Link>
                     <nav>
                         <ul className='navLink'>
                             <li>Accueil</li>

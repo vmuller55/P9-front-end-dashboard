@@ -92,12 +92,15 @@ h2{
     .chartTwo{
         grid-row-start: 2;
         height: fit-content;
+        height: 50px;
     }
     .chartThree{
         grid-row-start: 2;
+        height: 50px;
     }
     .chartFour{
         grid-row-start: 2;
+        height: 50px;
     }
     
 }

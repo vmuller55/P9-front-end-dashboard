@@ -14,7 +14,7 @@ const ObjectifChart = ({ mainData }) => {
 		{ name: 'Score', value: mainData.scorePourcent},
 	]
 	return (
-		<div style={{ minWidth: "258px", height: "263px", backgroundColor: "#FBFBFB", borderRadius: "5px",}}>
+		<div className="objectifChart" style={{ minWidth: "258px", height: "263px", backgroundColor: "#FBFBFB", borderRadius: "5px",}}>
 			<ResponsiveContainer>
 				<PieChart width={50} height={50}>
 					<Pie 

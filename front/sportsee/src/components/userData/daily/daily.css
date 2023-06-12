@@ -3,3 +3,9 @@
     height: 320px;
     background-color: #FBFBFB;
 }
+
+@media screen and (max-width:1170px) {
+    .activityChart{
+        height: 250px;
+    }
+}
