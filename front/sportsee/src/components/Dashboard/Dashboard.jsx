@@ -92,21 +92,21 @@ export function Dashboard() {
                     <Aside 
                         amount={userMain.proteine}
                         image={proteinImage} 
-                        alt='logo de machin' 
+                        alt='logo de poulet' 
                         unit='g' 
                         description='Proteine'
                     />
                     <Aside 
                         amount={userMain.glucide}
                         image={carbsImage} 
-                        alt='logo de machin' 
+                        alt='logo de pomme' 
                         unit='g' 
                         description='Glucides'
                     />
                     <Aside 
                         amount={userMain.lipide}
                         image={fatImage} 
-                        alt='logo de machin' 
+                        alt='logo de burger' 
                         unit='g' 
                         description='Lipides'
                     />
