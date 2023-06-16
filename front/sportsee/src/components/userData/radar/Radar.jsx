@@ -1,35 +1,16 @@
 import React from "react";
 import { ResponsiveContainer, PolarGrid, PolarAngleAxis, Radar, RadarChart, } from "recharts";
 /**
- * Build radarChart with sort data. Add "type" and "index" object
+ * Build radarChart with sort data. 
  * @param {Object}  
  * @returns 
  */
 const RadarChartThree = ({ perfData }) => {
-		const type = [
-			{ type: 'Intensité', index : 6},
-			{ type: 'Cardio', index: 1},
-			{ type: 'Energie', index: 2},
-			{ type: 'Endurance', index: 3},
-			{ type: 'Force', index: 4},
-			{ type: 'Vitesse', index: 5},
-		]
-		const addType= () => {
-			for(let i = 0; i<perfData.data.length; i++){
-				for(let j = 0; j<type.length; j++) {
-					if(perfData.data[i].kind === type[j].index){
-						Object.assign(perfData.data[i], type[j])
-					}
-				}
-			}
-		}
 
-		addType();
-		
-		perfData.data.sort((a,b) => {
-			return b.index-a.index
-		})
-	
+	perfData.data.sort((a,b) => {
+		return b.kind-a.kind
+	})
+
 	return (
 		<div className="radarChart" style={{ minWidth: "258px", height: "263px" }}>
 			<ResponsiveContainer>

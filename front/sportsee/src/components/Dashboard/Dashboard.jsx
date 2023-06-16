@@ -11,14 +11,14 @@ import dataUser from '../../services/mockFetch'
  * import dataUser from '../../services/fetch'
  */
 import DailyChart from '../userData/daily/Daily'
-import CaloriesAside from '../userData/aside/Calories/Calories'
-import ProteinAside from '../userData/aside/prot/Protein'
-import CarbsAside from '../userData/aside/Carbs/Carbs'
-import FatAside from '../userData/aside/fat/Fat'
 import UserAverageSessions from '../userData/average/Average'
 import RadarChartThree from '../userData/radar/Radar'
 import ObjectifChart from '../userData/Objectif/Objectif'
-
+import Aside from '../userData/aside/Aside'
+import calorieImage from '../../assets/images/calories.svg'
+import proteinImage from '../../assets/images/protein.svg'
+import carbsImage from '../../assets/images/carbs.svg'
+import fatImage from '../../assets/images/fat.svg'
 
 export function Dashboard() {
     /**
@@ -70,7 +70,7 @@ export function Dashboard() {
             </div>
         )
     }  
-
+    
     return(
         <div className='wrapperDashboard'>
             <div className='banner'>
@@ -82,13 +82,37 @@ export function Dashboard() {
                 <DailyChart activityData={userActivity.sessions}/>
                 </div>
                 <div className='aside'>
-                    <CaloriesAside amountOfCalories={userMain.calorie}/>
-                    <ProteinAside amountOfProtein={userMain.proteine}/>
-                    <CarbsAside amountOfCarbs={userMain.glucide}/>
-                    <FatAside amountOfFat={userMain.lipide}/>
+                    <Aside 
+                        amount={userMain.calorie}
+                        image={calorieImage} 
+                        alt='logo de feu' 
+                        unit='Kcal' 
+                        description='Calories'
+                    />
+                    <Aside 
+                        amount={userMain.proteine}
+                        image={proteinImage} 
+                        alt='logo de machin' 
+                        unit='g' 
+                        description='Proteine'
+                    />
+                    <Aside 
+                        amount={userMain.glucide}
+                        image={carbsImage} 
+                        alt='logo de machin' 
+                        unit='g' 
+                        description='Glucides'
+                    />
+                    <Aside 
+                        amount={userMain.lipide}
+                        image={fatImage} 
+                        alt='logo de machin' 
+                        unit='g' 
+                        description='Lipides'
+                    />
                 </div>
                 <div className='chartTwo'>
-                    <UserAverageSessions averageSessionData={userSessions.sessions}></UserAverageSessions>
+                    <UserAverageSessions averageSessionData={userSessions}></UserAverageSessions>
                 </div>
                 <div className='chartThree'>
                     <RadarChartThree perfData={userPerformance} ></RadarChartThree>

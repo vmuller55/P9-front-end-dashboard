@@ -18,28 +18,8 @@ function DailyChart({ activityData }) {
             );
         }
         return null;
-      }
-    
-    const dayNumber = [
-        { dayNum: 1},
-        { dayNum: 2},
-        { dayNum: 3},
-        { dayNum: 4},
-        { dayNum: 5},
-        { dayNum: 6},
-        { dayNum: 7},
-    ]
-    /**
-     * Add a number to days
-     */
-    const addNum= () => {
-        for(let i = 0; i<activityData.length; i++){
-             Object.assign(activityData[i], dayNumber[i]) 
-        }
     }
-
-    addNum();
-
+    
     return (
         <div className="activityChart">
             <ResponsiveContainer >

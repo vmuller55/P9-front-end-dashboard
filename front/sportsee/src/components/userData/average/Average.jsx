@@ -25,29 +25,11 @@ function UserAverageSessions({averageSessionData}) {
         );
     };
 
-    const newDays = [
-        { dayLetter: "L"},
-        { dayLetter: "M"},
-        { dayLetter: "M"},
-        { dayLetter: "J"},
-        { dayLetter: "V"},
-        { dayLetter: "S"},
-        { dayLetter: "D"},
-    ];
-
-    const addDay = () => {
-        for(let i = 0; i<averageSessionData.length; i++){
-             Object.assign(averageSessionData[i], newDays[i]) 
-        }
-    }
-
-    addDay();
-	
     return (
         <div className="linearChart" style={{ minWidth: "258px", height: "263px" }}>
 			<ResponsiveContainer>
 				<LineChart width={300} height={300}
-					data={averageSessionData}
+					data={averageSessionData.sessions}
 					margin={{top: 80, right: 30, left: 20, bottom: 10,}}
 					style={{ background: "#FF0000", borderRadius: "5px" }}>
 					<CartesianGrid vertical={false} horizontal={false} />
